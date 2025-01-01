@@ -1,17 +1,12 @@
----
+<!-- ---
 layout: post
 title: 使用ebpf替代iptables
-category: net
-typora-root-url: ../../..
----
+categories: [kernel, ebpf]
+tags: [ebpf, cilium]
+date: 2023-12-21 16:00 +0800
+--- -->
 
 ## 资源综述
-
-项目：[xnat](https://gitee.com/xxf2015/xnat)
-
-依赖：
-
-* 
 
 参考：
 

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: cilium核心（cilium-daemon）实现源码分析
-category: net
-typora-root-url: ../../..
+categories: [kernel, ebpf]
+tags: [ebpf, cilium]
+date: 2024-01-02 16:00:00 +0800
 ---
 
 > 转自：[Cilium eBPF实现机制源码分析](https://www.cnxct.com/how-does-cilium-use-ebpf-with-go-and-c/)
@@ -26,7 +27,7 @@ Cilium使用eBPF的强大功能来加速网络，并在Kubernetes中提供安全
 
 从Cilium的架构图来看，位于容器编排系统和Linux Kernel之间，使用eBPF技术来控制容器网络的转发行为以及安全策略执行。其使用的eBPF功能包括宿主机网卡流量控制，容器container功能管理等。与系统交互的模块是`Cilium Daemon`，负责eBPF字节码生成、字节码注入到linux kernel，并进行数据读取等。
 
-![img](../../../assets/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/cilium-arch.png)
+![img](/assets/img/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/cilium-arch.png)
 所以，本文重点将放在`Cilium Daemon`实现上。
 
 `Cilium Daemon`模块在源码里对应`https://github.com/cilium/cilium/tree/master/daemon`目录，从`main.go`主文件开始阅读即可。但在阅读之前，先对cilium项目的目录结构做一个认识。
@@ -71,7 +72,7 @@ bpf目录下有很多eBPF实现的源码，文件列表如下
 
 在详细阐述每个模块源码之前，我们先来复习一下linux kernel的网络栈
 
-![img](../../../assets/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/Linux-kernel-network-stack-xdp-tc.png)
+![img](/assets/img/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/Linux-kernel-network-stack-xdp-tc.png)
 如图所示，入口网络流量在到达NIC后，依次经过XDP、TC、Netfilter、TCP、socket层。
 cilium的ebpf相关程序，核心功能是针对pod宿主机、pod、容器几个角色之间的网络流量管控。那么其功能肯定是在这几个栈的对应部位做响应hook。
 
@@ -131,7 +132,7 @@ L7策略对象将代理流量重定向到Cilium用户空间代理实例。使用
 
 如上组件是Cilium实现的灵活高效的 datapath。下图展示端点到端点的进出口网络流量经过的链路，以及涉及的cilium相关网络对象。
 
-![cilium的Datapath图](../../../assets/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/cilium_bpf_endpoint.svg)
+![cilium的Datapath图](/assets/img/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/cilium_bpf_endpoint.svg)
 
 ### 总结
 
@@ -175,7 +176,7 @@ func (d *Daemon) initMaps() error {
 initMaps函数中初始化了cilium的所有eBPF map，功能包括xdp、ct等网络对象处理。
 eBPF maps作用博主rexrock在文章 `https://rexrock.github.io/post/cilium2/`中做个直观的图，见
 
-![img](../../../assets/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/post-2408-61b1c9fe40471.png)
+![img](/assets/img/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/post-2408-61b1c9fe40471.png)
 
 本文挑选其中一个例子来讲。就是前提提到的events maps初始化，用于内核的ebpf字节码调试输出的日志，对应代码`eventsmap.InitMap(possibleCPUs)`。 代码文件在`pkg/map/eventsmap/eventsmap.go`的53行
 
@@ -590,7 +591,7 @@ Cilium产品是面向微服务场景下的网络管理方案，涉及的安全�
 
 ### cilium中ebpf map构成
 
-![the maps of cilium](../../../assets/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/1614297479000.png)
+![the maps of cilium](/assets/img/cilium%E6%A0%B8%E5%BF%83%EF%BC%88cilium-daemon%EF%BC%89%E5%AE%9E%E7%8E%B0%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/1614297479000.png)
 
 ### 2.1 公共ebpf map的初始化
 

@@ -2,7 +2,7 @@
 layout: post
 title: kubeadm部署cilium
 categories: [coder, cloud]
-tags: [k8s]
+tags: [k8s, cilium]
 date: 2024-12-03 17:00 +0800
 ---
 
