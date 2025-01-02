@@ -1,8 +1,9 @@
 ---
 layout: post
 title: vscode替代vim
-category: system
-typora-root-url: ../..
+categories: [devtools]
+tags: [vscode]
+date: 2022-04-19 17:00:00 +0800
 ---
 
 ## 离线包自动安装

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: code-server远程开发经验
-category: system
-typora-root-url: ../..
+categories: [devtools]
+tags: [code-server]
+date: 2024-11-20 10:00:00 +0800
 ---
 
 ## 部署

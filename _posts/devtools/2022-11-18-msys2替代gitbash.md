@@ -1,8 +1,9 @@
 ---
 layout: post
 title: msys2替代gitbash
-category: system
-typora-root-url: ../..
+categories: [devtools]
+tags: [msys2, gitbash]
+date: 2022-11-18 15:00:00 +0800
 ---
 
 ## 背景

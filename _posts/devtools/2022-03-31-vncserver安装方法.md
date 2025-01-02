@@ -1,8 +1,9 @@
 ---
 layout: post
 title: vncserver安装方法
-category: system
-typora-root-url: ../..
+categories: [devtools]
+tags: [qemu, vncserver]
+date: 2022-03-31 18:00:00 +0800
 ---
 
 ### vncserver部署
