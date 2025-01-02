@@ -1,7 +1,7 @@
 ---
 layout: post
 title: kolla部署openstack_yoga版本
-category: [coder, cloud]
+categories: [coder, cloud]
 tags: [openstack]
 date: 2024-03-03 15:30:00 +0800
 ---

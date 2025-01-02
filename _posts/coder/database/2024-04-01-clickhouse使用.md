@@ -1,8 +1,8 @@
 ---
 layout: post
 title: clickhouse使用
-category: [coder, database]
-tag: [clickhouse]
+categories: [coder, database]
+tags: [clickhouse]
 ---
 
 ## 数据库部署
