@@ -136,10 +136,40 @@ kubesphere中，Prometheus组件用于监控集群中的各种资源，包括节
 KubeSphere 3.4 使用 Prometheus Operator 来管理 Prometheus/Alertmanager 配置和生命周期、ServiceMonitor（用于管理抓取配置）和 PrometheusRule（用于管理 Prometheus 记录/告警规则）。因此：
 * 如需调优监控抓取指标，可以修改ServiceMonitor（CRD）配置。
 * 如需调优告警规则，可以修改PrometheusRule（CRD）配置。
+* 如需调优Prometheus本身的配置，可以修改Prometheus（CRD）配置。如调整`k8s`的yaml配置，设置`spec.replicas=1`将集群副本数设置为1，以减少Prometheus的内存占用。
 
 无用指标分析，可以参考：
 * [如何精简 Prometheus 的指标和存储占用](https://blog.csdn.net/east4ming/article/details/127916705)
 * [优化实践：Prometheus 性能和高基数问题](https://flashcat.cloud/blog/prometheus-performance-and-cardinality-in-practice/)
+
+调整Prometheus采集指标，调整 ServiceMonitor（CRD）配置示例：
+  ```yaml
+  apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    labels:
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/version: 1.9.7
+    name: kube-state-metrics
+    namespace: kube-system
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+      interval: 15s # 该参数为采集频率，您可以调大以降低数据存储费用，例如不重要的指标可以改为 300s，可以降低20倍的监控数据采集量
+      port: http-metrics
+      scrapeTimeout: 15s # 该参数为采集超时时间，Prometheus 的配置要求采集超时时间不能超过采集间隔，即：scrapeTimeout <= interval
+    metricRelabelings: # 针对每个采集到的点都会做如下处理
+    - sourceLabels: ["__name__"] # 要检测的label名称，__name__ 表示指标名称，也可以是任意这个点所带的label
+      regex: kube_node_info|kube_node_role # 上述label是否满足这个正则，在这里，我们希望__name__满足kube_node_info或kube_node_role
+      action:  keep # 如果点满足上述条件，则保留，否则就自动抛弃
+    jobLabel: app.kubernetes.io/name
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        app.kubernetes.io/name: kube-state-metrics
+  ```
+
 
 ### kube-apiserver内存占用优化
 kube-apiserver是Kubernetes集群的核心组件之一，负责处理集群中所有资源的请求。kube-apiserver的性能和资源占用情况对集群的整体性能有很大影响。
