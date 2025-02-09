@@ -98,6 +98,38 @@ kubesphere部署方式有多种，包括helm、k8s部署、二进制部署等。
               - master # 选择kubernetes.io/hostname=master的节点上的pv
     ```
 
+1. 调整cluster-configuration.yaml配置的节点数：
+    ```shell
+    ...
+    monitoring:
+      storageClass: ""                 # If there is an independent StorageClass you need for Prometheus, you can specify it here. The default StorageClass is used by default.
+      node_exporter:
+        port: 9100
+        # resources: {}
+      kube_rbac_proxy:
+        resources: {}
+      kube_state_metrics:
+        resources: {}
+      prometheus:
+        replicas: 1  # Prometheus replicas are responsible for monitoring different segments of data source and providing high availability.
+        volumeSize: 20Gi  # Prometheus PVC size.
+        resources: {}
+        operator:
+          resources: {}
+      alertmanager:
+        replicas: 1          # AlertManager Replicas.
+        resources: {}
+      notification_manager:
+        replicas: 1
+        resources: {}
+        operator:
+          resources: {}
+        proxy:
+          resources: {}
+    
+    ...
+    ```
+
 1. 安装kubesphere：
     ```shell
     # 初始化kubesphere，指定部署文件、集群配置文件、存储类文件。
