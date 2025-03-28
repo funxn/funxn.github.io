@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "cf561d87f2ab28bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f137231adf5abf35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "951858ef095284a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "coder/sdn/2019-01-01-SDN的理论思想.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2019-01-01-SDN的理论思想"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d4479f8a26a8f8be",
+    "type": "split",
+    "children": [
+      {
+        "id": "3ee9dd35a5f8cb07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30066bd1344d98de",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c0e1056ca4763bfc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "76a6a32292e78c29",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c5a5efa89d0a97fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf1cf7d0cdb5508f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7009eb324d768d42",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "coder/sdn/2019-01-01-SDN的理论思想.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2019-01-01-SDN的理论思想"
+            }
+          },
+          {
+            "id": "179859d2fc535ee9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "coder/sdn/2019-01-01-SDN的理论思想.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2019-01-01-SDN的理论思想"
+            }
+          },
+          {
+            "id": "49ec4403aec9ae30",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2d2d2ded314dee87",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "coder/sdn/2019-01-01-SDN的理论思想.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2019-01-01-SDN的理论思想"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "951858ef095284a9",
+  "lastOpenFiles": [
+    "coder/sdn/2020-01-02-sdn入门.md",
+    "coder/sdn/2019-01-01-SDN的理论思想.md",
+    "coder/cloud/2024-03-02-云计算基本思想.md",
+    "IT/0_日常工作.md"
+  ]
+}
