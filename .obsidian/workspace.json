@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "63a46f60646e5ea8",
+        "id": "b405547f715be48c",
         "type": "tabs",
         "children": [
           {
-            "id": "a53c716abdb1fb0f",
+            "id": "6c6b3add6294175e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 328.5
   },
   "right": {
     "id": "6e75f57f17597bd9",
@@ -94,9 +94,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/IT/周报.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "_posts/IT/7_维护经验规范.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 周报"
+              "title": "Backlinks for 7_维护经验规范"
             }
           },
           {
@@ -151,12 +151,12 @@
               "title": "Outline of 周报"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,15 +168,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a53c716abdb1fb0f",
+  "active": "6c6b3add6294175e",
   "lastOpenFiles": [
+    "_posts/IT/7_维护经验规范.md",
+    "assets/Pasted image 20250425145307.png",
+    "assets/Pasted image 20250425145116.png",
+    "assets/Pasted image 20250425145032.png",
+    "assets/Pasted image 20250425144938.png",
+    "assets/Pasted image 20250425144909.png",
+    "assets/Pasted image 20250425144842.png",
+    "_posts/devtools/2025-04-24-windows操纵系统优化.md",
     "_posts/IT/0_日常工作.md",
-    "_posts/IT/周报.md",
+    "_posts/IT/Untitled.md",
+    "assets/8bd42ec25adae3f57bffce780eb45cd.jpg",
+    "assets/f0429831201f129e1aaa332c169bd63.jpg",
+    "_posts/IT/6_机房维护.md",
     "_posts/IT/3_数据库与可视化.md",
+    "_posts/IT/2_设备维修.md",
+    "_posts/IT/周报.md",
+    "_posts/IT/4_日常流程简化.md",
+    "_posts/IT/5_活动支持.md",
+    "_posts/IT/1_PE操作.md",
+    "_posts/IT/2025.04.10机房核心交换机故障事故报告.md",
+    "other/test.md",
+    "other/2025.04.10机房核心交换机故障事故报告.html",
+    "Untitled",
+    "2025-04-01.md",
     "assets/Pasted image 20250318160830.png",
     "assets/1742285118387.png",
-    "assets/Pasted image 20250318160553.png",
-    "_posts/IT/1_PE操作.md",
     "_posts/IT/2_同事记录.md",
     "_posts/coder/sdn/2019-01-01-SDN的理论思想.md"
   ]

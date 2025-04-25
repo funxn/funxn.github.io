@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2025.04.10机房核心交换机故障事故报告</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-focused {outline: 1px dotted #212121;}
+.ͼ1 {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0; overflow-anchor: none;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; min-height: 100%; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {position: absolute; left: 0; top: 0; contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused > .cm-scroller > .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #ddd;}
+.ͼ1 .cm-dropCursor {position: absolute;}
+.ͼ1.cm-focused > .cm-scroller > .cm-cursorLayer .cm-cursor {display: block;}
+.ͼ1 .cm-iso {unicode-bidi: isolate;}
+.ͼ1 .cm-announced {position: fixed; top: -10000px;}
+@media print {.ͼ1 .cm-announced {display: none;}}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; inset-inline-start: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0; z-index: 300;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace {background-image: radial-gradient(circle at 50% 55%, #aaa 20%, transparent 5%); background-position: center;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+ 
+.pandoc-plugin-error {
+    color: red;
+}
+ undefined
+</style>
+    </head>
+    <body>
+<h3 data-heading="事故描述" dir="auto">事故描述</h3>
+<p dir="auto">【问题现象】2025.04.10凌晨开始园区内出现部分楼栋wifi网络、门禁网络无法连接问题，IT检修过程中进一步升级为全园区网络无法连接问题，后续经过紧急采购并替换机房核心交换机故障模块，问题得到解决。<br>
+【持续时间】2025.04.10 05:39:00（大约）~ 2025.04.10 16:47:00<br>
+【事故影响】高</p>
+<h3 data-heading="事故原因" dir="auto">事故原因</h3>
+<ol>
+<li dir="auto">核心设备日常的巡查不到位，对于服役年限较长的核心设备没有做好充分的冗余备份，导致严重故障发生后只能长时间等待设备采购到位后才能解决问题。（根本原因）</li>
+<li dir="auto">园区机房核心交换机设备目前在一个机柜中，部署有上下层两套，原本设计应该为上下层主从热备，但是光纤接线存在问题，实际并没有发挥主备效果。（主要原因）</li>
+<li dir="auto">机房光纤接线没有打标签，无法识别光纤对应的楼栋信息，导致调整光纤跳线困难。</li>
+<li dir="auto">部分IT人员对于核心设备工作原理掌握及操控仍不够娴熟，需加强学习积累。</li>
+</ol>
+<h3 data-heading="处理过程" dir="auto">处理过程</h3>
+<ol>
+<li dir="auto">2025.04.10 05:39:00（大约）或更早的时间，下层核心交换机的两个供电模块均出现故障，报错“output failed”，导致该核心交换机无法工作。园区A栋的wifi网络、正面门禁均连接到该核心交换机，因此园区A栋的wifi网络、正面门禁出现异常。</li>
+<li dir="auto">2025.04.10 08:00:00（大约）由于机房光纤跳线没有详细楼栋标签，IT人员尝试将下层核心交换机光纤跳线接到上层正常工作的核心交换机无效果，于是尝试重启上层核心交换机，重启后的上层核心交换机的两个供电模块同样均出现故障，报错“output failed”，导致上层核心交换机也无法正常工作，进而导致整个园区断网。</li>
+<li dir="auto">2025.04.10 08:00:00 ~ 2025.04.10 09:00:00（大约）IT人员尝试重启设备、换用大电流供电线、联系思科（核心交换机供应商）客服、联系其他校区IT人员指导等方式均无法修复所有的4个供电模块，其中思科客服以过保为由拒绝提供指导。</li>
+<li dir="auto">2025.04.10 09:00:00 ~ 2025.04.10 12:00:00（大约）经上级指导及IT内部讨论，开始紧急联系深圳、广州卖家采购同型号的供电模块及核心交换机整机，并联系广州校区、小径湾电信运营商借用设备。同步将部分打印机设备设置为无需联网认证模式，避免影响紧急的打印需求。</li>
+<li dir="auto">2025.04.10 13:50:00 ~ 2025.04.10 14:40:00（大约）从深圳卖家采购的两个供电模块送达，安装后一个正常运行，另一个运行一段时间后又报错“output failed”，导致部分楼栋网络如A栋网络恢复一段时间后又故障。</li>
+<li dir="auto">2025.04.10 14:40:00 ~ 2025.04.10 16:47:00 IT人员开始逐步尝试将下层核心交换机的光纤跳线接到上层核心交换机，并逐楼层重启楼层的交换机。至此园区网络全面恢复正常。</li>
+<li dir="auto">2025.04.10 17:30:00左右，广州卖家采购的核心交换机整机、广州校区、小径湾电信运营商借用设备均已到达，IT人员补充可用的供电模块，并测试作为备用的核心交换机整机正常工作后离开机房。</li>
+</ol>
+<h3 data-heading="反思与改进" dir="auto">反思与改进</h3>
+<ol>
+<li dir="auto">IT人员内部讨论并制定核心设备的日常巡查规范，覆盖巡查频率、巡查要点（服役年限、是否过保、是否存在备用设备等）等，并交上级审阅通过，提前发现核心设备故障并进行排除。</li>
+<li dir="auto">IT人员在非工作时间对于机房光纤对应的楼栋信息进行测试并打标签，同时梳理光纤跳线，实现核心交换机主从热备结构。</li>
+<li dir="auto">IT人员加强对于核心设备工作原理的学习和掌握，并逐步建立核心设备操作流程规范文档，实现按规范文档高效处理问题。</li>
+</ol>
+    </body>
+</html>
