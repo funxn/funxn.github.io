@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 280.5
   },
   "right": {
     "id": "6e75f57f17597bd9",
@@ -171,17 +171,29 @@
   },
   "active": "6c6b3add6294175e",
   "lastOpenFiles": [
+    "_posts/IT/0_日常工作.md",
+    "_posts/lang/rust/2024-09-25-1_环境搭建hello_world.md",
+    "_posts/lang/rust/2024-03-31-X_rust用于开发操作系统.md",
+    "_posts/lang/rust/2024-03-31-2_上手example.md",
+    "_posts/lang/rust/2024-03-31-0_rust对比简介.md",
+    "_posts/lang/rust",
+    "_posts/IT/2025.04.10机房核心交换机故障事故报告.md",
+    "_posts/IT/Office 365 Email Login Step - by - Step Guide.md",
+    "_posts/IT/打印机问题修复经验.md",
+    "_posts/IT/周报.md",
+    "_posts/lang/c++/2020-12-09-cpp学习笔记.md",
+    "_posts/lang/golang/2023-07-02-golang各平台库编译.md",
+    "_posts/lang/golang/2020-04-10-go性能优化.md",
+    "_posts/lang/golang/2020-04-06-go简明要点.md",
+    "_posts/IT/6_机房维护.md",
+    "_posts/coder/sdk/2025-01-24-yasio框架学习与改进思路.md",
     "_posts/coder/cloud/2024-02-01-docker快速上手.md",
     "_posts/coder/cloud/2024-02-02-docker实现控制iptables转发.md",
     "_posts/coder/cloud/2024-02-04-docker自己简单实现.md",
-    "_posts/IT/0_日常工作.md",
-    "_posts/IT/周报.md",
     "_posts/coder/sdk/2024-08-20-sdk编译环境容器化.md",
-    "_posts/coder/sdk/2025-01-24-yasio框架学习与改进思路.md",
     "_posts/IT/ZTE插卡wifi备用路由器测试.md",
     "assets/Pasted image 20250430092717.png",
     "assets/Pasted image 20250430092344.png",
-    "_posts/IT/6_机房维护.md",
     "_posts/IT/5_活动支持.md",
     "_posts/IT/4_日常流程简化.md",
     "_posts/IT/7_维护经验规范.md",
@@ -196,13 +208,7 @@
     "assets/f0429831201f129e1aaa332c169bd63.jpg",
     "_posts/IT/3_数据库与可视化.md",
     "_posts/IT/2_设备维修.md",
-    "_posts/IT/1_PE操作.md",
-    "_posts/IT/2025.04.10机房核心交换机故障事故报告.md",
-    "other/test.md",
     "other/2025.04.10机房核心交换机故障事故报告.html",
-    "Untitled",
-    "2025-04-01.md",
-    "_posts/IT/2_同事记录.md",
-    "_posts/coder/sdn/2019-01-01-SDN的理论思想.md"
+    "Untitled"
   ]
 }
